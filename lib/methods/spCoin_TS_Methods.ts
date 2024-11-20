@@ -1,10 +1,10 @@
-import { SpCoinLogger } from "./lib/utils/logging.js";
-import { SpCoinERC20Methods } from "./lib/spCoinTransferMethods";
-import { SpCoinDeleteMethods } from "./lib/spCoinDeleteMethods";
-import { SpCoinAddMethods } from "./lib/spCoinAddMethods";
-import { SpCoinReadMethods } from "./lib/SpCoinReadMethods";
-import { SpCoinRewardsMethods } from "./lib/spCoinRewardsMethods"; 
-import { SpCoinStakingMethods } from "./lib/spCoinStakingMethods"; 
+import { SpCoinLogger } from "../lib/utils/logging.js";
+import { SpCoinERC20Methods } from "../lib/spCoinTransferMethods";
+import { SpCoinDeleteMethods } from "../lib/spCoinDeleteMethods";
+import { SpCoinAddMethods } from "../lib/spCoinAddMethods";
+import { SpCoinReadMethods } from "../lib/SpCoinReadMethods";
+import { SpCoinRewardsMethods } from "../lib/spCoinRewardsMethods"; 
+import { SpCoinStakingMethods } from "../lib/spCoinStakingMethods"; 
 import { second, minute, hour, day, week, year, month, millennium } from "./lib/spCoinStakingMethods"; 
 
 
