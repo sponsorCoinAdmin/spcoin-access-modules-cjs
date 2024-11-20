@@ -1,11 +1,11 @@
-const { SpCoinLogger, LOG_MODE } = require("./utils/logging");
-const { SpCoinERC20Methods } = require("./spCoinTransferMethods");
-const { SpCoinDeleteMethods } = require("./spCoinDeleteMethods");
-const { SpCoinAddMethods } = require("./spCoinAddMethods");
-const { SpCoinReadMethods } = require("./SpCoinReadMethods");
-const { SpCoinRewardsMethods } = require("./spCoinRewardsMethods"); 
-const { SpCoinStakingMethods } = require("./spCoinStakingMethods"); 
-const { second, minute, hour, day, week, year, month , millennium } = require("./spCoinStakingMethods");
+const { SpCoinLogger, LOG_MODE } = require("./lib/utils/logging");
+const { SpCoinERC20Methods } = require("./lib/spCoinTransferMethods");
+const { SpCoinDeleteMethods } = require("./lib/spCoinDeleteMethods");
+const { SpCoinAddMethods } = require("./lib/spCoinAddMethods");
+const { SpCoinReadMethods } = require("./lib/SpCoinReadMethods");
+const { SpCoinRewardsMethods } = require("./lib/spCoinRewardsMethods"); 
+const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods"); 
+const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingMethods");
 
 
 class SpCoinClassMethods {
