@@ -7,10 +7,7 @@ const { SpCoinRewardsMethods } = require("./lib/spCoinRewardsMethods");
 const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods"); 
 const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingMethods");
 
-
 class SpCoinClassMethods {
-  
-
   constructor(_spCoinContractDeployed) {
     this.spCoinContractDeployed = _spCoinContractDeployed;
     this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed);
