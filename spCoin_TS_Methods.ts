@@ -9,9 +9,15 @@ const { second, minute, hour, day, week, year, month , millennium } = require(".
 
 
 class SpCoinClassMethods {
-  
-
-  constructor(_spCoinContractDeployed) {
+  spCoinContractDeployed: any;
+  spCoinAddMethods: any;
+  spCoinDeleteMethods: any;
+  spCoinERC20Methods: any;
+  spCoinLogger: any;
+  spCoinReadMethods: any;
+  spCoinRewardsMethods: any;
+  spCoinStakingMethods: any;
+  constructor(_spCoinContractDeployed:any) {
     this.spCoinContractDeployed = _spCoinContractDeployed;
     this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed);
     this.spCoinDeleteMethods = new SpCoinDeleteMethods(this.spCoinContractDeployed);
