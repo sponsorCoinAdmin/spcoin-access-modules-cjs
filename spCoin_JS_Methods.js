@@ -8,7 +8,10 @@ const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods");
 const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingMethods");
 
 class SpCoinClassMethods {
-  constructor(_spCoinContractDeployed) {
+  constructor(_spCoinContractDeployed, spCoinABI, spCoinAddress, signer) {
+    // console.log(`spCoinAddress = ${spCoinAddress}`)
+    // console.log(`spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
+    // console.log(`signer = ${JSON.stringify(signer,null,2)}`)
     this.spCoinContractDeployed = _spCoinContractDeployed;
     this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed);
     this.spCoinDeleteMethods = new SpCoinDeleteMethods(this.spCoinContractDeployed);
