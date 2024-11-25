@@ -1,3 +1,4 @@
+import hre  from 'hardhat'
 import ethers  from 'ethers'
 const { SpCoinLogger, LOG_MODE } = require("./lib/utils/logging");
 const { SpCoinERC20Methods } = require("./lib/spCoinTransferMethods");
@@ -8,10 +9,17 @@ const { SpCoinRewardsMethods } = require("./lib/spCoinRewardsMethods");
 const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods"); 
 const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingMethods");
 
+// const ethers = hre.ethers;
+
 class SpCoinClassMethods {
   // constructor(_spCoinContractDeployed) {
     constructor(_spCoinContractDeployed, spCoinABI, spCoinAddress, signer) {
-    // const msgSigner = new ethers.Contract(spCoinAddress, spCoinABI, signer);
+      // console.log(`AAA spCoinAddress = ${spCoinAddress}`)
+      // console.log(`AAA spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
+      // console.log(`AAA signer = ${JSON.stringify(signer,null,2)}`)
+
+      console.log(`AAA ethers = ${JSON.stringify(ethers,null,2)}`)
+      const msgSigner = new ethers.Contract(spCoinAddress, spCoinABI, signer);
 
     // const signedWeth = new ethers.Contract(spCoinAddress, spCoinABI, signer);
 
