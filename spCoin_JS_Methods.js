@@ -1,5 +1,5 @@
 import hre  from 'hardhat'
-import ethers  from 'ethers'
+import { ethers }  from 'ethers'
 const { SpCoinLogger, LOG_MODE } = require("./lib/utils/logging");
 const { SpCoinERC20Methods } = require("./lib/spCoinTransferMethods");
 const { SpCoinDeleteMethods } = require("./lib/spCoinDeleteMethods");
@@ -8,8 +8,6 @@ const { SpCoinReadMethods } = require("./lib/SpCoinReadMethods");
 const { SpCoinRewardsMethods } = require("./lib/spCoinRewardsMethods"); 
 const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods"); 
 const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingMethods");
-
-// const ethers = hre.ethers;
 
 class SpCoinClassMethods {
   // constructor(_spCoinContractDeployed) {
