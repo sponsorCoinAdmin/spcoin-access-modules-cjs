@@ -6,14 +6,11 @@ const { SpCoinAddMethods } = require("./lib/spCoinAddMethods");
 const { SpCoinReadMethods } = require("./lib/SpCoinReadMethods");
 const { SpCoinRewardsMethods } = require("./lib/spCoinRewardsMethods"); 
 const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods"); 
-const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingMethods");
 
 class SpCoinClassMethods {
   // constructor(_spCoinContractDeployed) {
     constructor(_spCoinContractDeployed, spCoinABI, spCoinAddress, signer) {
-    // const msgSigner = new ethers.Contract(spCoinAddress, spCoinABI, signer);
-
-    // const signedWeth = new ethers.Contract(spCoinAddress, spCoinABI, signer);
+    const msgSigner = new ethers.Contract(spCoinAddress, spCoinABI, signer);
 
     // console.log(`spCoinAddress = ${spCoinAddress}`)
     // console.log(`spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)

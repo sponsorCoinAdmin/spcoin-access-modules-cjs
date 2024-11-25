@@ -1,3 +1,4 @@
+import ethers  from 'ethers'
 const { SpCoinLogger, LOG_MODE } = require("./lib.OLD/utils/logging");
 const { SpCoinERC20Methods } = require("./lib.OLD/spCoinTransferMethods");
 const { SpCoinDeleteMethods } = require("./lib.OLD/spCoinDeleteMethods");
@@ -16,7 +17,8 @@ class SpCoinClassMethods {
   spCoinReadMethods: any;
   spCoinRewardsMethods: any;
   spCoinStakingMethods: any;
-  constructor(_spCoinContractDeployed:any) {
+  constructor(_spCoinContractDeployed, spCoinABI:any, spCoinAddress:any, signer:any) {
+    // const msgSigner = new ethers.Contract(spCoinAddress, spCoinABI, signer);
     this.spCoinContractDeployed = _spCoinContractDeployed;
     this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed);
     this.spCoinDeleteMethods = new SpCoinDeleteMethods(this.spCoinContractDeployed);

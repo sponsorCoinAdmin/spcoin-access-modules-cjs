@@ -1,23 +1,25 @@
 import ethers  from 'ethers'
-const { SpCoinLogger, LOG_MODE } = require("./lib/utils/logging");
-const { SpCoinERC20Methods } = require("./lib/spCoinTransferMethods");
-const { SpCoinDeleteMethods } = require("./lib/spCoinDeleteMethods");
-const { SpCoinAddMethods } = require("./lib/spCoinAddMethods");
-const { SpCoinReadMethods } = require("./lib/SpCoinReadMethods");
-const { SpCoinRewardsMethods } = require("./lib/spCoinRewardsMethods"); 
-const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods"); 
-const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingMethods");
+const { SpCoinLogger, LOG_MODE } = require("./lib.OLD/utils/logging");
+const { SpCoinERC20Methods } = require("./lib.OLD/spCoinTransferMethods");
+const { SpCoinDeleteMethods } = require("./lib.OLD/spCoinDeleteMethods");
+const { SpCoinAddMethods } = require("./lib.OLD/spCoinAddMethods");
+const { SpCoinReadMethods } = require("./lib.OLD/SpCoinReadMethods");
+const { SpCoinRewardsMethods } = require("./lib.OLD/spCoinRewardsMethods"); 
+const { SpCoinStakingMethods } = require("./lib.OLD/spCoinStakingMethods"); 
+const { second, minute, hour, day, week, year, month , millennium } = require("./lib.OLD/spCoinStakingMethods");
 
 class SpCoinClassMethods {
+  spCoinContractDeployed: any;
+  spCoinAddMethods: any;
+  spCoinDeleteMethods: any;
+  spCoinERC20Methods: any;
+  spCoinLogger: any;
+  spCoinReadMethods: any;
+  spCoinRewardsMethods: any;
+  spCoinStakingMethods: any;
   // constructor(_spCoinContractDeployed) {
-    constructor(_spCoinContractDeployed, spCoinABI, spCoinAddress, signer) {
-    // const msgSigner = new ethers.Contract(spCoinAddress, spCoinABI, signer);
-
-    // const signedWeth = new ethers.Contract(spCoinAddress, spCoinABI, signer);
-
-    // console.log(`spCoinAddress = ${spCoinAddress}`)
-    // console.log(`spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
-    // console.log(`signer = ${JSON.stringify(signer,null,2)}`)
+  constructor(_spCoinContractDeployed, spCoinABI, spCoinAddress, signer) {
+    const msgSigner = new ethers.Contract(spCoinAddress, spCoinABI, signer);
     this.spCoinContractDeployed = _spCoinContractDeployed;
     this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed);
     this.spCoinDeleteMethods = new SpCoinDeleteMethods(this.spCoinContractDeployed);
@@ -42,7 +44,7 @@ class SpCoinClassMethods {
   }
 }
 
-export {
+module.exports = {
   SpCoinClassMethods,
   SpCoinAddMethods,
   SpCoinDeleteMethods,
