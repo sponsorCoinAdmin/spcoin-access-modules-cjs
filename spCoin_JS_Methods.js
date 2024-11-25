@@ -8,7 +8,11 @@ const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods");
 const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingMethods");
 
 class SpCoinClassMethods {
-  constructor(_spCoinContractDeployed, spCoinABI, spCoinAddress, signer) {
+  // constructor(_spCoinContractDeployed) {
+    constructor(_spCoinContractDeployed, spCoinABI, spCoinAddress, signer) {
+
+    // const signedWeth = new ethers.Contract(spCoinAddress, spCoinABI, signer);
+
     // console.log(`spCoinAddress = ${spCoinAddress}`)
     // console.log(`spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
     // console.log(`signer = ${JSON.stringify(signer,null,2)}`)
@@ -36,7 +40,7 @@ class SpCoinClassMethods {
   }
 }
 
-module.exports = {
+export {
   SpCoinClassMethods,
   SpCoinAddMethods,
   SpCoinDeleteMethods,
