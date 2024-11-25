@@ -19,13 +19,11 @@ class SpCoinClassMethods {
       console.log(`AAA ethers = ${JSON.stringify(ethers,null,2)}`)
       const msgSigner = new ethers.Contract(spCoinAddress, spCoinABI, signer);
 
-    // const signedWeth = new ethers.Contract(spCoinAddress, spCoinABI, signer);
-
     // console.log(`spCoinAddress = ${spCoinAddress}`)
     // console.log(`spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
     // console.log(`signer = ${JSON.stringify(signer,null,2)}`)
     this.spCoinContractDeployed = _spCoinContractDeployed;
-    this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed);
+    this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed, msgSigner);
     this.spCoinDeleteMethods = new SpCoinDeleteMethods(this.spCoinContractDeployed);
     this.spCoinERC20Methods = new SpCoinERC20Methods(this.spCoinContractDeployed);
     this.spCoinLogger = new SpCoinLogger(this.spCoinContractDeployed);
