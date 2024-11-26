@@ -1,4 +1,4 @@
-const { } = require("../../prod//lib/utils/logging");
+import { SpCoinLogger } from "./logging";
 
 const printTestHHAccounts = () => {
     return JSON.stringify(TEST_HH_ACCOUNT_LIST, null, 2);
@@ -129,7 +129,7 @@ const getNetworkRecipientAgents = async(_accountKey, _recipientKey) => {
     return JSON.stringify(recipientAgents, null, 2);
 }
 
-module.exports = {
+export default {
 // Local Calls
     printTestHHAccounts,
     printStructureTree,

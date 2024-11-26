@@ -1,12 +1,11 @@
 import ethers  from 'ethers'
-const { SpCoinLogger, LOG_MODE } = require("./lib.OLD/utils/logging");
-const { SpCoinERC20Methods } = require("./lib.OLD/spCoinTransferMethods");
-const { SpCoinDeleteMethods } = require("./lib.OLD/spCoinDeleteMethods");
-const { SpCoinAddMethods } = require("./lib.OLD/spCoinAddMethods");
-const { SpCoinReadMethods } = require("./lib.OLD/SpCoinReadMethods");
-const { SpCoinRewardsMethods } = require("./lib.OLD/spCoinRewardsMethods"); 
-const { SpCoinStakingMethods } = require("./lib.OLD/spCoinStakingMethods"); 
-const { second, minute, hour, day, week, year, month , millennium } = require("./lib.OLD/spCoinStakingMethods");
+import { SpCoinLogger, LOG_MODE } from "./lib/utils/logging";
+import { SpCoinERC20Methods } from "./lib/spCoinTransferMethods";
+import { SpCoinDeleteMethods } from "./lib/spCoinDeleteMethods";
+import { SpCoinAddMethods } from "./lib/spCoinAddMethods";
+import { SpCoinReadMethods } from "./lib/SpCoinReadMethods";
+import { SpCoinRewardsMethods } from "./lib/spCoinRewardsMethods";
+import { SpCoinStakingMethods } from "./lib/spCoinStakingMethods";
 
 class SpCoinClassMethods {
   spCoinContractDeployed: any;

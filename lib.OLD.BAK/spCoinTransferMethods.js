@@ -1,4 +1,4 @@
-const { SpCoinLogger } = require("./utils/logging");
+import { SpCoinLogger } from "./utils/logging";
 let spCoinLogger;
 
 class SpCoinERC20Methods {
@@ -24,6 +24,6 @@ class SpCoinERC20Methods {
 
 //////////////////// MODULE EXPORTS //////////////////////
 
-module.exports = {
+export default {
   SpCoinERC20Methods
 }

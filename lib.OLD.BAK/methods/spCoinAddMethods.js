@@ -1,5 +1,5 @@
-const { SpCoinLogger } = require("./utils/logging");
-const { second, minute, hour, day, week, year, month , millennium } = require("./spCoinStakingMethods"); 
+import { SpCoinLogger } from "./utils/logging";
+import { second, minute, hour, day, week, year, month, millennium } from "./spCoinStakingMethods"; 
 
 let spCoinLogger;
 const BURN_ACCOUNT = "0x0000000000000000000000000000000000000000";
@@ -223,6 +223,6 @@ constructor(_spCoinContractDeployed) {
 
 //////////////////// MODULE EXPORTS //////////////////////
 
-module.exports = {
+export default {
   SpCoinAddMethods,
 }

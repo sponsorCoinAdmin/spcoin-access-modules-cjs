@@ -1,11 +1,6 @@
-const { bigIntToDateTimeString,
-  bigIntToDecString,
-  bigIntToHexString,
-  bigIntToString,
-  getLocation
-} = require("./utils/dateTime");
-const { SpCoinLogger } = require("./utils/logging");
-const { SpCoinSerialize } = require("./utils/serialize");
+import { bigIntToDateTimeString, bigIntToDecString, bigIntToHexString, bigIntToString, getLocation } from "./utils/dateTime";
+import { SpCoinLogger } from "./utils/logging";
+import { SpCoinSerialize } from "./utils/serialize";
 
 
 let spCoinLogger;
@@ -38,6 +33,6 @@ class SpCoinRewardsMethods {
 
 /////////////////////// EXPORT MODULE FUNCTIONS ///////////////////////
 
-module.exports = {
+export default {
   SpCoinRewardsMethods
 };

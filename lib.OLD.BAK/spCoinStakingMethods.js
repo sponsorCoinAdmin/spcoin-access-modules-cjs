@@ -1,15 +1,5 @@
-const { 
-  bigIntToDecString,
-  second,
-  minute,
-  hour,
-  day,
-  week,
-  year,
-  month,
-  millennium
- } = require("./utils/dateTime");
-const { SpCoinLogger } = require("./utils/logging");
+import { bigIntToDecString, second, minute, hour, day, week, year, month, millennium } from "./utils/dateTime";
+import { SpCoinLogger } from "./utils/logging";
 
 let spCoinLogger;
 
@@ -147,7 +137,7 @@ class SpCoinStakingMethods {
 
 /////////////////////// EXPORT MODULE FUNCTIONS ///////////////////////
 
-module.exports = {
+export default {
   SpCoinStakingMethods,
   second,
   hour,
