@@ -25,12 +25,12 @@ class SpCoinClassMethods {
     // console.log(`signer = ${JSON.stringify(signer,null,2)}`)
     // this.spCoinContractDeployed = _spCoinContractDeployed;
     this.spCoinAddMethods = new SpCoinAddMethods(spCoinContractDeployed, spCoinContractSigned);
-    this.spCoinDeleteMethods = new SpCoinDeleteMethods(spCoinContractDeployed);
-    this.spCoinERC20Methods = new SpCoinERC20Methods(spCoinContractDeployed);
-    this.spCoinLogger = new SpCoinLogger(spCoinContractDeployed);
-    this.spCoinReadMethods = new SpCoinReadMethods(spCoinContractDeployed);
-    this.spCoinRewardsMethods = new SpCoinRewardsMethods(spCoinContractDeployed);
-    this.spCoinStakingMethods = new SpCoinStakingMethods(spCoinContractDeployed);
+    this.spCoinDeleteMethods = new SpCoinDeleteMethods(spCoinContractSigned);
+    this.spCoinERC20Methods = new SpCoinERC20Methods(spCoinContractSigned);
+    this.spCoinLogger = new SpCoinLogger(spCoinContractSigned);
+    this.spCoinReadMethods = new SpCoinReadMethods(spCoinContractSigned);
+    this.spCoinRewardsMethods = new SpCoinRewardsMethods(spCoinContractSigned);
+    this.spCoinStakingMethods = new SpCoinStakingMethods(spCoinContractSigned);
   }
 
   methods = () => {
