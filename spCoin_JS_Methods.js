@@ -7,19 +7,6 @@ import { SpCoinReadMethods } from "./lib/SpCoinReadMethods";
 import { SpCoinRewardsMethods } from "./lib/spCoinRewardsMethods";
 import { SpCoinStakingMethods } from "./lib/spCoinStakingMethods";
 
-
-class Person {
-  constructor(first, last) {
-    this.first = first;
-    this.last = last;
-  }
-
-  getName() {
-    return `${this.first} ${this.last}`;
-  }
-}
-
-
 class SpCoinClassMethods {
   // constructor(_spCoinContractDeployed) {
     constructor(spCoinABI, spCoinAddress, signer) {
@@ -28,8 +15,6 @@ class SpCoinClassMethods {
       // console.log(`AAA signer = ${JSON.stringify(signer,null,2)}`)
 
       // console.log(`AAA ethers = ${JSON.stringify(ethers,null,2)}`)
-
-      const p1 = new Person('James', 'Doe');
 
       const spCoinContractDeployed = new ethers.Contract(spCoinAddress, spCoinABI, signer);
       const spCoinContractSigned = spCoinContractDeployed.connect(signer)
