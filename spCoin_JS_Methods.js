@@ -11,25 +11,25 @@ const { second, minute, hour, day, week, year, month , millennium } = require(".
 
 class SpCoinClassMethods {
   // constructor(_spCoinContractDeployed) {
-    constructor(_spCoinContractDeployed, spCoinABI, spCoinAddress, signer) {
+    constructor(spCoinABI, spCoinAddress, signer) {
       // console.log(`AAA spCoinAddress = ${spCoinAddress}`)
       // console.log(`AAA spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
       // console.log(`AAA signer = ${JSON.stringify(signer,null,2)}`)
 
-      console.log(`AAA ethers = ${JSON.stringify(ethers,null,2)}`)
-      const msgSigner = new ethers.Contract(spCoinAddress, spCoinABI, signer);
+      // console.log(`AAA ethers = ${JSON.stringify(ethers,null,2)}`)
+      const spCoinContractDeployed = new ethers.Contract(spCoinAddress, spCoinABI, signer);
 
-    // console.log(`spCoinAddress = ${spCoinAddress}`)
+    // console.log(`ZZZZZZZZZZ spCoinAddress = ${spCoinAddress}`)
     // console.log(`spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
     // console.log(`signer = ${JSON.stringify(signer,null,2)}`)
-    this.spCoinContractDeployed = _spCoinContractDeployed;
-    this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed, msgSigner);
-    this.spCoinDeleteMethods = new SpCoinDeleteMethods(this.spCoinContractDeployed);
-    this.spCoinERC20Methods = new SpCoinERC20Methods(this.spCoinContractDeployed);
-    this.spCoinLogger = new SpCoinLogger(this.spCoinContractDeployed);
-    this.spCoinReadMethods = new SpCoinReadMethods(this.spCoinContractDeployed);
-    this.spCoinRewardsMethods = new SpCoinRewardsMethods(this.spCoinContractDeployed);
-    this.spCoinStakingMethods = new SpCoinStakingMethods(this.spCoinContractDeployed);
+    // this.spCoinContractDeployed = _spCoinContractDeployed;
+    this.spCoinAddMethods = new SpCoinAddMethods(spCoinContractDeployed, signer);
+    this.spCoinDeleteMethods = new SpCoinDeleteMethods(spCoinContractDeployed);
+    this.spCoinERC20Methods = new SpCoinERC20Methods(spCoinContractDeployed);
+    this.spCoinLogger = new SpCoinLogger(spCoinContractDeployed);
+    this.spCoinReadMethods = new SpCoinReadMethods(spCoinContractDeployed);
+    this.spCoinRewardsMethods = new SpCoinRewardsMethods(spCoinContractDeployed);
+    this.spCoinStakingMethods = new SpCoinStakingMethods(spCoinContractDeployed);
   }
 
   methods = () => {
