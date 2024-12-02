@@ -10,7 +10,7 @@ const ethers = require('ethers');
 
 class SpCoinClassMethods {
   // constructor(_spCoinContractDeployed) {
-    constructor(_spCoinContractDeployed, spCoinABI, spCoinAddress, signer) {
+    constructor(spCoinABI, spCoinAddress, signer) {
       // console.log(`AAA spCoinAddress = ${spCoinAddress}`)
       // console.log(`AAA spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
       // console.log(`AAA signer = ${JSON.stringify(signer,null,2)}`)
@@ -21,7 +21,7 @@ class SpCoinClassMethods {
     // console.log(`spCoinAddress = ${spCoinAddress}`)
     // console.log(`spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
     // console.log(`signer = ${JSON.stringify(signer,null,2)}`)
-    this.spCoinContractDeployed = _spCoinContractDeployed;
+    this.spCoinContractDeployed = signedContract;
     this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed, signedContract);
     this.spCoinDeleteMethods = new SpCoinDeleteMethods(this.spCoinContractDeployed);
     this.spCoinERC20Methods = new SpCoinERC20Methods(this.spCoinContractDeployed);
