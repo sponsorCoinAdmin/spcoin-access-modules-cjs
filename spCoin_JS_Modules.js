@@ -1,11 +1,11 @@
 const { SpCoinLogger, LOG_MODE } = require("./lib/utils/logging");
-const { SpCoinERC20Methods } = require("./lib/spCoinTransferMethods");
-const { SpCoinDeleteMethods } = require("./lib/spCoinDeleteMethods");
-const { SpCoinAddModule } = require("./lib/spCoinAddMethods");
-const { SpCoinReadMethods } = require("./lib/SpCoinReadMethods");
-const { SpCoinRewardsMethods } = require("./lib/spCoinRewardsMethods"); 
-const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods"); 
-const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingMethods");
+const { SpCoinERC20Module } = require("./lib/spCoinTransferModule");
+const { SpCoinDeleteModule } = require("./lib/spCoinDeleteModule");
+const { SpCoinAddModule } = require("./lib/spCoinAddModule");
+const { SpCoinReadModule } = require("./lib/spCoinReadModule");
+const { SpCoinRewardsModule } = require("./lib/spCoinRewardsModule"); 
+const { SpCoinStakingModule } = require("./lib/spCoinStakingModule"); 
+const { second, minute, hour, day, week, year, month , millennium } = require("./lib/spCoinStakingModule");
 const ethers = require('ethers');
 
 class SpCoinClassModules {
@@ -23,12 +23,12 @@ class SpCoinClassModules {
     // console.log(`signer = ${JSON.stringify(signer,null,2)}`)
     this.spCoinContractDeployed = signedContract;
     this.spCoinAddMethods = new SpCoinAddModule(this.spCoinContractDeployed, signedContract);
-    this.spCoinDeleteMethods = new SpCoinDeleteMethods(this.spCoinContractDeployed);
-    this.spCoinERC20Methods = new SpCoinERC20Methods(this.spCoinContractDeployed);
+    this.spCoinDeleteMethods = new SpCoinDeleteModule(this.spCoinContractDeployed);
+    this.spCoinERC20Methods = new SpCoinERC20Module(this.spCoinContractDeployed);
     this.spCoinLogger = new SpCoinLogger(this.spCoinContractDeployed);
-    this.spCoinReadMethods = new SpCoinReadMethods(this.spCoinContractDeployed);
-    this.spCoinRewardsMethods = new SpCoinRewardsMethods(this.spCoinContractDeployed);
-    this.spCoinStakingMethods = new SpCoinStakingMethods(this.spCoinContractDeployed);
+    this.spCoinReadMethods = new SpCoinReadModule(this.spCoinContractDeployed);
+    this.spCoinRewardsMethods = new SpCoinRewardsModule(this.spCoinContractDeployed);
+    this.spCoinStakingMethods = new SpCoinStakingModule(this.spCoinContractDeployed);
   }
 
   methods = () => {
@@ -48,10 +48,10 @@ class SpCoinClassModules {
 module.exports =  {
   SpCoinClassModules,
   SpCoinAddModule,
-  SpCoinDeleteMethods,
-  SpCoinERC20Methods,
+  SpCoinDeleteModule,
+  SpCoinERC20Module,
   SpCoinLogger,
-  SpCoinReadMethods,
-  SpCoinRewardsMethods,
-  SpCoinStakingMethods
+  SpCoinReadModule,
+  SpCoinRewardsModule,
+  SpCoinStakingModule
 }
