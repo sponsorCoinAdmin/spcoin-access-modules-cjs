@@ -1,7 +1,7 @@
 const { SpCoinLogger, LOG_MODE } = require("./lib/utils/logging");
 const { SpCoinERC20Methods } = require("./lib/spCoinTransferMethods");
 const { SpCoinDeleteMethods } = require("./lib/spCoinDeleteMethods");
-const { SpCoinAddMethods } = require("./lib/spCoinAddMethods");
+const { SpCoinAddModule } = require("./lib/spCoinAddMethods");
 const { SpCoinReadMethods } = require("./lib/SpCoinReadMethods");
 const { SpCoinRewardsMethods } = require("./lib/spCoinRewardsMethods"); 
 const { SpCoinStakingMethods } = require("./lib/spCoinStakingMethods"); 
@@ -22,7 +22,7 @@ class SpCoinClassModules {
     // console.log(`spCoinABI = ${JSON.stringify(spCoinABI,null,2)}`)
     // console.log(`signer = ${JSON.stringify(signer,null,2)}`)
     this.spCoinContractDeployed = signedContract;
-    this.spCoinAddMethods = new SpCoinAddMethods(this.spCoinContractDeployed, signedContract);
+    this.spCoinAddMethods = new SpCoinAddModule(this.spCoinContractDeployed, signedContract);
     this.spCoinDeleteMethods = new SpCoinDeleteMethods(this.spCoinContractDeployed);
     this.spCoinERC20Methods = new SpCoinERC20Methods(this.spCoinContractDeployed);
     this.spCoinLogger = new SpCoinLogger(this.spCoinContractDeployed);
@@ -47,7 +47,7 @@ class SpCoinClassModules {
 
 module.exports =  {
   SpCoinClassModules,
-  SpCoinAddMethods,
+  SpCoinAddModule,
   SpCoinDeleteMethods,
   SpCoinERC20Methods,
   SpCoinLogger,
