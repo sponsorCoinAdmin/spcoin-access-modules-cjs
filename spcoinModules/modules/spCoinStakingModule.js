@@ -8,8 +8,8 @@ const {
   year,
   month,
   millennium
- } = require("./utils/dateTime");
-const { SpCoinLogger } = require("./utils/logging");
+ } = require("../utils//dateTime");
+const { SpCoinLogger } = require("../utils/logging");
 
 let spCoinLogger;
 

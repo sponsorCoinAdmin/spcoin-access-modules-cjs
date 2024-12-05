@@ -1,4 +1,4 @@
-const { SpCoinLogger } = require("./utils/logging");
+const { SpCoinLogger } = require("../utils/logging");
 
 let spCoinLogger;
 const BURN_ADDRESS = "0x0000000000000000000000000000000000000000";

@@ -1,4 +1,4 @@
-const { SpCoinLogger, LOG_MODE } = require("./modules/utils/logging");
+const { SpCoinLogger, LOG_MODE } = require("./utils/logging");
 const { SpCoinERC20Module } = require("./modules/spCoinERC20Module");
 const { SpCoinDeleteModule } = require("./modules/spCoinDeleteModule");
 const { SpCoinAddModule } = require("./modules/spCoinAddModule");

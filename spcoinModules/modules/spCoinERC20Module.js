@@ -1,4 +1,4 @@
-const { SpCoinLogger } = require("./utils/logging");
+const { SpCoinLogger } = require("../utils/logging");
 let spCoinLogger;
 
 class SpCoinERC20Module {

@@ -3,9 +3,9 @@ const { bigIntToDateTimeString,
   bigIntToHexString,
   bigIntToString,
   getLocation
-} = require("./utils/dateTime");
-const { SpCoinLogger } = require("./utils/logging");
-const { SpCoinSerialize } = require("./utils/serialize");
+} = require("../utils//dateTime");
+const { SpCoinLogger } = require("../utils/logging");
+const { SpCoinSerialize } = require("../utils//serialize");
 
 
 let spCoinLogger;

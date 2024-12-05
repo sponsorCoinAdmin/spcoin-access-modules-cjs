@@ -1,4 +1,4 @@
-const { SpCoinLogger } = require("./utils/logging");
+const { SpCoinLogger } = require("../utils/logging");
 const {
   RewardAccountStruct,
   AccountStruct,
@@ -13,7 +13,7 @@ const {
   StakingTransactionStruct
 } = require("../dataTypes/spCoinDataTypes");
 
-const { SpCoinSerialize, bigIntToDecString, bigIntToDateTimeString, getLocation } = require("./utils/serialize");
+const { SpCoinSerialize, bigIntToDecString, bigIntToDateTimeString, getLocation } = require("../utils//serialize");
 
 const SPONSOR = 0;
 const RECIPIENT = 1;
