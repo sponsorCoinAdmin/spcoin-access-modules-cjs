@@ -11,7 +11,7 @@ const {
   RewardTransactionStruct,
   RewardTypeStruct,
   StakingTransactionStruct
-} = require("./dataTypes/spCoinDataTypes");
+} = require("../dataTypes/spCoinDataTypes");
 
 const { SpCoinSerialize, bigIntToDecString, bigIntToDateTimeString, getLocation } = require("./utils/serialize");
 
