@@ -1,4 +1,4 @@
-const { } = require("../../prod//modules/utils/logging");
+const { } = require("../../prod//spcoinModules/utils/logging");
 
 const printTestHHAccounts = () => {
     return JSON.stringify(TEST_HH_ACCOUNT_LIST, null, 2);

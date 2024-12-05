@@ -1,11 +1,11 @@
-const { SpCoinLogger, LOG_MODE } = require("./modules/utils/logging");
-const { SpCoinERC20Module } = require("./modules/spCoinERC20Module");
-const { SpCoinDeleteModule } = require("./modules/spCoinDeleteModule");
-const { SpCoinAddModule } = require("./modules/spCoinAddModule");
-const { SpCoinReadModule } = require("./modules/spCoinReadModule");
-const { SpCoinRewardsModule } = require("./modules/spCoinRewardsModule"); 
-const { SpCoinStakingModule } = require("./modules/spCoinStakingModule"); 
-const { second, minute, hour, day, week, year, month , millennium } = require("./modules/spCoinStakingModule");
+const { SpCoinLogger, LOG_MODE } = require("./spcoinModules/utils/logging");
+const { SpCoinERC20Module } = require("./spcoinModules/spCoinERC20Module");
+const { SpCoinDeleteModule } = require("./spcoinModules/spCoinDeleteModule");
+const { SpCoinAddModule } = require("./spcoinModules/spCoinAddModule");
+const { SpCoinReadModule } = require("./spcoinModules/spCoinReadModule");
+const { SpCoinRewardsModule } = require("./spcoinModules/spCoinRewardsModule"); 
+const { SpCoinStakingModule } = require("./spcoinModules/spCoinStakingModule"); 
+const { second, minute, hour, day, week, year, month , millennium } = require("./spcoinModules/spCoinStakingModule");
 const ethers = require('ethers');
 
 class SpCoinClassModules {
