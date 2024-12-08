@@ -7,7 +7,7 @@ const HARDHAT = 31337;
 const BURN_ADDRESS = "0x0000000000000000000000000000000000000000"
 
 // load ABI from build artifacts
-async function getDeployedWethAbi(){
+async function getDeployedWethABI(){
    return wethABI;
 }
 
@@ -18,13 +18,19 @@ const getWeth9NetworkAddress = (chainId) => {
         case HARDHAT: return "0x5147c5C1Cb5b5D3f56186C37a4bcFBb3Cd0bD5A7";
         default: return BURN_ADDRESS;
     }
-} 
-  
+}
+
+const getWeth9DefaultNetworkABIAddress = (chainId) => {
+    const weth9Address = getWeth9NetworkAddress(chainId);
+    return { weth9Address, wethABI};
+
+}  
 module.exports = {
     ETHEREUM,
     POLYGON,
     HARDHAT,
     BURN_ADDRESS,
-    getDeployedWethAbi,
+    getDeployedWethABI,
+    getWeth9DefaultNetworkABIAddress,
     getWeth9NetworkAddress
   }
