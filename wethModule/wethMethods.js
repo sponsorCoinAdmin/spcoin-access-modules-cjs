@@ -1,7 +1,7 @@
 const ethers = require('ethers');
 
 class WethMethods {
-    constructor(_weth9Address, _weth9ABI, _signer, _dump=true) {
+    constructor( _weth9Address, _weth9ABI, _signer, _dump=true) {
       this.action;
       this.beforeEthBalance;
       this.beforeWethBalance;

@@ -8,18 +8,6 @@ const BURN_ADDRESS = "0x0000000000000000000000000000000000000000"
 
 // load ABI from build artifacts
 async function getDeployedWethAbi(){
-   // const fsPromises = fs.promises;
-   // console.log(`AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`)
-   // const ABI_FILE_PATH = `./wethABI.json`
-   // console.log(`ABI_FILE_PATH = ${ABI_FILE_PATH}`);
-   // const data = await fsPromises.readFile(ABI_FILE_PATH, 'utf8');
-   // console.log(`ABI_FILE_PATH data = ${data}`);
-   // const abi = JSON.parse(data)['abi'];
-   // console.log(`ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ`)
-   // console.log(`ZZZ abi = ${JSON.stringify(abi,null,2)}`)
-
-   // console.log(`utils.abi = ${JSON.stringify(abi,null,2)}`)
-
    return wethABI;
 }
 
