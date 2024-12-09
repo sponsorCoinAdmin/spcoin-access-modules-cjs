@@ -4,11 +4,6 @@ const ETHEREUM = 1;
 const POLYGON = 137;
 const HARDHAT = 31337;
 const BURN_ADDRESS = "0x0000000000000000000000000000000000000000"
-const { getDeployedWeth9ABI,
-  // getWeth9DefaultNetworkABIAddress,
-  getWeth9NetworkAddress } = require("./utils");
-  // const fs = require('fs')
-  // const abi = require('./weth9ABI')
 
 class WethMethods {
   constructor( _weth9Address, _weth9ABI, _signer, _dump=true) {
