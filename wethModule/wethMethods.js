@@ -165,5 +165,9 @@ getWeth9DefaultNetworkABIAddress = (chainId) => {
 }
 
 module.exports = {
-  WethMethods
+  WethMethods,
+  ETHEREUM,
+  POLYGON,
+  HARDHAT,
+  BURN_ADDRESS
 }
