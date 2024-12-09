@@ -30,8 +30,11 @@ const getWeth9DefaultNetworkABIAddress = (chainId) => {
 
 }  
 module.exports = {
-    BURN_ADDRESS,
-    getDeployedWeth9ABI,
+    // ETHEREUM,
+    // POLYGON,
+    // HARDHAT,
+    // BURN_ADDRESS,
+    // getDeployedWeth9ABI,
     getWeth9DefaultNetworkABIAddress,
     getWeth9NetworkAddress
   }
