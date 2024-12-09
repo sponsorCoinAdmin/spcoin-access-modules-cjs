@@ -7,7 +7,7 @@ const HARDHAT = 31337;
 const BURN_ADDRESS = "0x0000000000000000000000000000000000000000"
 
 // load ABI from build artifacts
-async function getDeployedWeth9ABI(){
+function getDeployedWeth9ABI(){
    return weth9ABI;
 }
 
@@ -22,6 +22,10 @@ const getWeth9NetworkAddress = (chainId) => {
 
 const getWeth9DefaultNetworkABIAddress = (chainId) => {
     const weth9Address = getWeth9NetworkAddress(chainId);
+    // console.log(`**** utils.getWeth9DefaultNetworkABIAddress chainId = ${chainId}`)
+    // console.log(`**** utils.getWeth9DefaultNetworkABIAddress weth9Address = ${weth9Address}`)
+    // console.log(`**** utils.getWeth9DefaultNetworkABIAddress weth9ABI = ${weth9ABI}`)
+
     return { weth9Address, weth9ABI};
 
 }  

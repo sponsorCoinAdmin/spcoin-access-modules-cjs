@@ -1,4 +1,10 @@
 const ethers = require('ethers');
+const { getDeployedWeth9ABI,
+  getWeth9DefaultNetworkABIAddress,
+  getWeth9NetworkAddress, 
+  ETHEREUM,
+  POLYGON,
+  HARDHAT } = require("./utils");
 
 class WethMethods {
   constructor( _weth9Address, _weth9ABI, _signer, _dump=true) {
@@ -17,6 +23,22 @@ class WethMethods {
     this.signer = _signer;
     this.provider = this.signer.provider;
     this.signedWeth = new ethers.Contract(_weth9Address, _weth9ABI, _signer);
+    this.logLine("-",80)
+    this.dumpLog(`EXECUTING: wethMethods.constructor this.signer.address  = ${this.signer.address}`);
+    this.logLine("-",80)
+  };
+
+  connectWeth9DefaultNetwork = ( _chainId, _signer ) => {
+    const { weth9Address, weth9ABI }  = getWeth9DefaultNetworkABIAddress(_chainId);
+    this.weth9Address = weth9Address;
+    this.weth9ABI = weth9ABI;
+    this.signer = _signer;
+    // console.log(`**** wethMethods.connectWeth9DefaultNetwork _chainId = ${_chainId}`)
+    // console.log(`**** wethMethods.connectWeth9DefaultNetwork _signer = ${_signer}`)
+    // console.log(`**** wethMethods.connectWeth9DefaultNetwork weth9Address = ${weth9Address}`)
+    // console.log(`**** wethMethods.connectWeth9DefaultNetwork weth9ABI = ${weth9ABI}`)
+    this.provider = this.signer.provider;
+    this.signedWeth = new ethers.Contract(weth9Address, weth9ABI, _signer);
     this.logLine("-",80)
     this.dumpLog(`EXECUTING: wethMethods.constructor this.signer.address  = ${this.signer.address}`);
     this.logLine("-",80)
