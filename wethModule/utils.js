@@ -1,14 +1,14 @@
-const { wethABI } = require('./wethABI.js')
+const { weth9ABI } = require('./weth9ABI.js')
 // const fs = require('fs')
-// const abi = require('./wethABI')
+// const abi = require('./weth9ABI')
 const ETHEREUM = 1;
 const POLYGON = 137;
 const HARDHAT = 31337;
 const BURN_ADDRESS = "0x0000000000000000000000000000000000000000"
 
 // load ABI from build artifacts
-async function getDeployedWethABI(){
-   return wethABI;
+async function getDeployedWeth9ABI(){
+   return weth9ABI;
 }
 
 const getWeth9NetworkAddress = (chainId) => {
@@ -22,7 +22,7 @@ const getWeth9NetworkAddress = (chainId) => {
 
 const getWeth9DefaultNetworkABIAddress = (chainId) => {
     const weth9Address = getWeth9NetworkAddress(chainId);
-    return { weth9Address, wethABI};
+    return { weth9Address, weth9ABI};
 
 }  
 module.exports = {
@@ -30,7 +30,7 @@ module.exports = {
     POLYGON,
     HARDHAT,
     BURN_ADDRESS,
-    getDeployedWethABI,
+    getDeployedWeth9ABI,
     getWeth9DefaultNetworkABIAddress,
     getWeth9NetworkAddress
   }

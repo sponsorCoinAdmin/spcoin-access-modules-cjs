@@ -1,4 +1,4 @@
-const wethABI = `[
+const weth9ABI = `[
     {
        "constant": true,
        "inputs": [],
@@ -279,5 +279,5 @@ const wethABI = `[
  ]`
 
  module.exports = {
-    wethABI
+    weth9ABI
   }
