@@ -3,7 +3,8 @@ const {
   WethMethods,
   ETHEREUM,
   POLYGON,
-  HARDHAT 
+  HARDHAT,
+  BURN_ADDRESS,
 } = require("./wethModule/wethMethods");
   
 class AccessModules {
@@ -17,6 +18,7 @@ module.exports =  {
   AccessModules,
   SpCoinClassModules,
   WethMethods,
+  BURN_ADDRESS,
   ETHEREUM,
   POLYGON,
   HARDHAT
