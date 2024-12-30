@@ -1,6 +1,6 @@
 {
   "name": "@sponsorcoin/spcoin-access-modules",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "Package to interface with Sponsor Coin (SPCOIN)",
   "main": "spCoinMethods.js",
   "directories": {
