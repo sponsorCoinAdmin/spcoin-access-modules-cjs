@@ -7,11 +7,6 @@ class SpCoinDeleteModule {
   constructor(_spCoinContractDeployed) {
     this.spCoinContractDeployed = _spCoinContractDeployed;
     spCoinLogger = new SpCoinLogger(_spCoinContractDeployed)
-    this.setSigner(_spCoinContractDeployed.signer);
-  }
-
-  setSigner(_signer) {
-    this.signer = _signer;
   }
 
   deleteAccountRecord = async (_accountKey) => {
