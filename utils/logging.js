@@ -1,5 +1,5 @@
 // ************************* LOG SECTION ******************************/
-const { stringifyBigInt } = require("../../../spcoin-common/spcoin-lib");
+const { stringifyBigInt } = require("../../spcoin-common/spcoin-lib");
 let LOG = true;
 let LOG_DETAIL = false;
 let LOG_TEST_HEADER = false;
