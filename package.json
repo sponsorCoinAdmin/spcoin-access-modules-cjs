@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs/issues"
   },
-  "homepage": "https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs#readme"
+  "homepage": "https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs#readme",
+  "dependencies": {
+    "@sponsorcoin/spcoin-lib": "^1.0.2"
+  }
 }
