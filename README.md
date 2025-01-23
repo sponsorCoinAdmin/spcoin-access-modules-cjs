@@ -1,1 +1,1 @@
-# spcoin-access-modules
+# spcoin-access-modules-cjs

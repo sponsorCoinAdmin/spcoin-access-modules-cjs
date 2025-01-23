@@ -1,5 +1,5 @@
 {
-  "name": "@sponsorcoin/spcoin-access-modules",
+  "name": "@sponsorcoin/spcoin-access-modules-cjs",
   "version": "1.0.31",
   "description": "Package to interface with Sponsor Coin (SPCOIN)",
   "main": "spCoinMethods.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sponsorCoinAdmin/spcoin-access-modules.git"
+    "url": "git+https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs.git"
   },
   "keywords": [
     "\"Sponsor",
@@ -22,9 +22,9 @@
   "author": "Sponsor Coin Admin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sponsorCoinAdmin/spcoin-access-modules/issues"
+    "url": "https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs/issues"
   },
-  "homepage": "https://github.com/sponsorCoinAdmin/spcoin-access-modules#readme",
+  "homepage": "https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs#readme",
   "dependencies": {
     "@sponsorcoin/spcoin-lib": "^1.0.2"
   }
