@@ -1,31 +1,20 @@
 {
   "name": "@sponsorcoin/spcoin-access-modules-cjs",
-  "version": "1.0.31",
+  "version": "1.0.0",
   "description": "Package to interface with Sponsor Coin (SPCOIN)",
-  "main": "spCoinMethods.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "private": false,
+  "main": "spcoinMethods.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "echo 'EXECUTING node_modules-dev/spcoin-common/spcoin-lib/package.json'"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs.git"
+    "url": "git+ssh://git@github.com/sponsorCoinAdmin/spcoin-access-modules-cjs.git"
   },
-  "keywords": [
-    "\"Sponsor",
-    "Coin\"",
-    "spcoin"
-  ],
-  "author": "Sponsor Coin Admin",
+  "author": "Robier Lanson\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dert\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs/issues"
   },
-  "homepage": "https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs#readme",
-  "dependencies": {
-    "@sponsorcoin/spcoin-lib": "^1.0.2"
-  }
+  "homepage": "https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs#readme"
 }
