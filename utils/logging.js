@@ -1,5 +1,6 @@
 // ************************* LOG SECTION ******************************/
 // const { stringifyBigInt } = require("../../../spcoin-common/spcoin-lib/");
+// const { stringifyBigInt } = require("@sponsorcoin/spcoin-lib");
 const { stringifyBigInt } = require("@sponsorcoin/spcoin-lib");
 
 let LOG = true;
