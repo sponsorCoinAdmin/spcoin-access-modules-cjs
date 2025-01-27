@@ -1,9 +1,9 @@
 {
   "name": "@sponsorcoin/spcoin-access-modules-cjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package to interface with Sponsor Coin (SPCOIN)",
   "private": false,
-  "main": "spcoinMethods.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/sponsorCoinAdmin/spcoin-access-modules-cjs.git"
   },
-  "author": "Robier Lanson\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dert\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "author": "Robert Lanson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sponsorCoinAdmin/spcoin-access-modules-cjs/issues"
