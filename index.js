@@ -5,7 +5,7 @@ const { SpCoinAddModule } = require("./modules/spCoinAddModule");
 const { SpCoinReadModule } = require("./modules/spCoinReadModule");
 const { SpCoinRewardsModule } = require("./modules/spCoinRewardsModule"); 
 const { SpCoinStakingModule } = require("./modules/spCoinStakingModule"); 
-// const ethers = require('ethers');
+const ethers = require('ethers');
 
 class SpCoinAccessModules {
     constructor(spCoinABI, spCoinAddress, signer) {
